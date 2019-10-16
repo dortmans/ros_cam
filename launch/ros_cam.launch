@@ -1,0 +1,5 @@
+<launch>
+  <node name="ros_cam" pkg="ros_cam" type="ros_cam.py"
+    output="screen" respawn="false" required="true">
+  </node>
+</launch>
