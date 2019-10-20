@@ -3,16 +3,14 @@
 # udevadm info --attribute-walk --name=/dev/video0  | grep -E "product|idVendor|idProduct|serial"
 
 # Integrated webcam
-SUBSYSTEM=="usb", ATTR{idVendor}=="5986", ATTR{idProduct}=="2113", SYMLINK+="cam0"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="5986",ATTRS{idProduct}=="2113",SYMLINK+="cam0"
 
 # Logitech, Inc. HD Pro Webcam C920
-
-SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="082d", SYMLINK+="cam1"
-#SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="082d", ATTRS{serial}=="XXXXXXXX", NAME="cam1"
-#SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="082d", ATTRS{serial}=="YYYYYYYY", NAME="cam2"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",SYMLINK+="cam1"
+#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="XXXXXXXX",SYMLINK+="cam1"
+#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="XXXXXXXX",SYMLINK+="cam2"
 
 # Logitech, Inc. Webcam C170
-
-SUBSYSTEM=="usb", ATTR{idVendor}=="046d", ATTR{idProduct}=="082b", SYMLINK+="cam2"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082b",SYMLINK+="cam3"
 
 
