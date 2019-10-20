@@ -1,0 +1,10 @@
+<launch>
+
+<include file="$(find ros_cam)/launch/usb_cam.launch">
+  <arg name="camera_name" value="camera" />
+  <arg name="video_device" value="/dev/cam0"/>
+  <arg name="camera_info" default="true" />
+  <arg name="camera_info_url" default="file://$(find ros_cam)/config/integrated_camera.yaml" />
+</include>
+
+</launch>
