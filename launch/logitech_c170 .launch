@@ -1,7 +1,7 @@
 <launch>
 
 <arg name="camera_name" default="camera" />
-<arg name="video_device" default="/dev/cam_integrated"/>
+<arg name="video_device" default="/dev/cam_c170"/>
 <arg name="camera_driver" default="usb_cam" />
 
 <include file="$(find ros_cam)/launch/$(arg camera_driver).launch">
@@ -11,7 +11,7 @@
   <arg name="image_height" value="480" />
   <arg name="framerate" value="30" />
   <arg name="camera_info" value="true" />
-  <arg name="camera_info_url" value="file://$(find ros_cam)/config/integrated_camera.yaml" />
+  <arg name="camera_info_url" value="file://$(find ros_cam)/config/logitech_c170_640x480.yaml" />
 </include>
 
 </launch>

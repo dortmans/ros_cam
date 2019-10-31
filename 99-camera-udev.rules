@@ -3,14 +3,14 @@
 # udevadm info --attribute-walk --name=/dev/video0  | grep -E "product|idVendor|idProduct|serial"
 
 # Integrated webcam
-SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="5986",ATTRS{idProduct}=="2113",SYMLINK+="cam0"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="5986",ATTRS{idProduct}=="2113",SYMLINK+="cam_integrated"
 
 # Logitech, Inc. HD Pro Webcam C920
-SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",SYMLINK+="cam1"
-#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="XXXXXXXX",SYMLINK+="cam1"
-#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="XXXXXXXX",SYMLINK+="cam2"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",SYMLINK+="cam_c920"
+#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="XXXXXXXX",SYMLINK+="cam_c920_1"
+#SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082d",ATTRS{serial}=="YYYYYYYY",SYMLINK+="cam_c920_2"
 
 # Logitech, Inc. Webcam C170
-SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082b",SYMLINK+="cam3"
+SUBSYSTEM=="video4linux",KERNEL=="video*",ATTRS{idVendor}=="046d",ATTRS{idProduct}=="082b",SYMLINK+="cam_c170"
 
 
